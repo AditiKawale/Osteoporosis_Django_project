@@ -1,0 +1,28 @@
+ {%load static%}
+
+<html>
+<head>
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+</head>
+
+  <body id='bg' style="background-image:url('{%static 'images/backg.jpg'%}');">
+    <div id="main">
+      <nav>
+      <label class="logo"  >Osteoporosis Detection</label>
+
+
+        <ul>
+          <li><a href="{% url 'home'%}">Home</a></li>
+          <li><a href="{% url 'upload'%}">Training</a></li>
+          <li><a href="{% url 'test'%}">Testing</a></li>
+          <li><a href="#">About</a></li>
+
+        </ul>
+      </nav>
+    </div>
+    {%block body_block%}
+    {%endblock%}
+  </body>
+
+  </html>
